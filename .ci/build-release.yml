@@ -32,7 +32,7 @@ jobs:
   - template: build-platform.yml
     parameters:
       platform: macOS
-      vmImage: macOS-latest
+      vmImage: macOS-10.14
 
   - job: Alpine_Build
     displayName: Alpine Build
