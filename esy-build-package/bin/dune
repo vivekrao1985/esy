@@ -19,7 +19,6 @@
   (pps ppx_let))
  (libraries EsyBuildPackage fastreplacestring cmdliner bos))
 
-
 (install
  (package esy)
  (section lib)
