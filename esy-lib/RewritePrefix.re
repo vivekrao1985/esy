@@ -1,6 +1,12 @@
 let cmd = {
-  let cmd = Path.v("esyRewritePrefixCommand");
-  Cmd.ofPath(cmd);
+  let cmd = "esyRewritePrefixCommand";
+  Path.(
+    v(Sys.argv[0] |> Filename.dirname |> Filename.dirname)
+    / "lib"
+    / "esy"
+    / cmd
+  )
+  |> Cmd.ofPath;
 };
 
 let rewritePrefix = (~origPrefix, ~destPrefix, path) => {
